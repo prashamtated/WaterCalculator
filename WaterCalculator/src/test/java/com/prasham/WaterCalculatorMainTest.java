@@ -13,7 +13,6 @@ class WaterCalculatorMainTest {
 
 	@Test
 	void check_input_to_program_null() {
-
 		final String[] landscape = {};
 		assertThrows(IllegalArgumentException.class, () -> main(landscape));
 	}

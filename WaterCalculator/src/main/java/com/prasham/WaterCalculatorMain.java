@@ -1,7 +1,5 @@
 package com.prasham;
 
-import static com.prasham.WaterCalculator.calculateWaterAmount;
-
 /**
  * @author PRASHAMT
  *
@@ -21,8 +19,9 @@ public class WaterCalculatorMain {
 		for (int i = 0; i < args.length; i++) {
 			landscape[i] = Integer.parseInt(args[i]);
 		}
-
-		final long waterAmount = calculateWaterAmount(landscape);
+		
+		WaterCalculator waterCalObj =  new WaterCalculator(landscape);
+		long waterAmount = waterCalObj.calculateWaterAmount();
 
 		System.out.println("Water collected inside pits is " + waterAmount + " units");
 	}
